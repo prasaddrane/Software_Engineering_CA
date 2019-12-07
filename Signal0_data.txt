@@ -1,0 +1,2 @@
+SignalID     Time   ColourFrom  ColourTo
+
