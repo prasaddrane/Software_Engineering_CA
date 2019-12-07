@@ -1,0 +1,57 @@
+
+text_red = ''
+text_green = ''
+text_red1 = ''
+text_green1 = ''
+text_red2 = ''
+text_green2 = ''
+def read():
+    global text_red
+    global text_green
+    global text_red1
+    global text_green1
+    global text_red2
+    global text_green2
+    f = open("E:/Software Engineering/Signal_data.txt", 'r')
+    d = open("E:/Software Engineering/Signal1_data.txt", 'r')
+    e= open("E:/Software Engineering/Signal2_data.txt", 'r')
+    text = f.readline()
+    text = str(text)
+    text_red = text[20:23]
+    text_green = text[32:37]
+    text1 = d.readline()
+    text1 = str(text1)
+    text_red1 = text1[20:23]
+    text_green1 = text1[32:37]
+    text2 = e.readline()
+    text2 = str(text2)
+    text_red2 = text2[20:23]
+    text_green2 = text2[32:37]
+    ColourFrom = []
+    ColourTo = []
+    ColourFrom1 = []
+    ColourTo1 = []
+    ColourFrom2 = []
+    ColourTo2 = []
+    ColourFrom.insert(0, text_red)
+    ColourTo.insert(0, text_green)
+    ColourFrom1.insert(0, text_red1)
+    ColourTo1.insert(0, text_green1)
+    ColourFrom2.insert(0, text_red2)
+    ColourTo2.insert(0, text_green2)
+    print(ColourFrom)
+    print(ColourTo)
+    print(ColourFrom1)
+    print(ColourTo1)
+    print(ColourFrom2)
+    print(ColourTo2)
+    if  ColourFrom == ['Red'] and  ColourFrom1 == ['Red'] and  ColourFrom2 == ['Red'] and ColourTo == ['Green'] and ColourTo1 == ['Green']  and ColourTo2 == ['Green']:
+        print("Valid Transition")
+    else:
+        print("Invalid Transition")
+        print(ColourFrom)
+        print(ColourTo)
+    f.close()
+    d.close()
+    e.close()
+  
